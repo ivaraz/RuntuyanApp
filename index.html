@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RuntuyanApp</title>
+    <!-- Font Awesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NEW: Navbar Section -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">RuntuyanApp</div>
+        <span>v1.0</span>
+      </div>
+    </nav>
+
+    <!-- Main App Content -->
+    <main class="main-content">
+      <div class="app-container">
+        <!-- Left Section: Input and Dashboard -->
+        <div class="input-section">
+          <h1>RuntuyanApp</h1>
+          <div class="input-container">
+            <input
+              type="text"
+              id="task-input"
+              placeholder="What's your plan?"
+            />
+            <button id="add-task-btn" aria-label="Add task">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="dashboard">
+            <div id="date-widget" class="dashboard-widget"></div>
+            <div id="task-stats" class="dashboard-widget">
+              <span>Total: <b id="total-tasks">0</b></span>
+              <span>Pending: <b id="pending-tasks">0</b></span>
+              <span>Completed: <b id="completed-tasks">0</b></span>
+            </div>
+            <div id="progress-container" class="dashboard-widget">
+              <div id="progress-bar"></div>
+            </div>
+            <div id="filter-actions" class="dashboard-widget">
+              <div class="filter-buttons">
+                <button id="filter-all" class="filter-btn active">All</button>
+                <button id="filter-active" class="filter-btn">Active</button>
+                <button id="filter-completed" class="filter-btn">
+                  Completed
+                </button>
+              </div>
+              <button id="clear-completed-btn">
+                <i class="fas fa-broom"></i> Clear Completed
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section: Output/Display -->
+        <div class="output-section">
+          <h2 class="desktop-only-heading">What's Next?</h2>
+          <ul id="task-list"></ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- NEW: Footer Section -->
+    <footer class="footer">
+      <p>Copyright &copy; 2025 by Muhammad Rifa</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
